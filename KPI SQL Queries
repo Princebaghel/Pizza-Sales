@@ -1,0 +1,35 @@
+#Total Revenue
+SELECT 
+	ROUND(SUM(total_price),2) AS 'Total Revenue'
+FROM sales;
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+#Average Order value
+SELECT 
+	ROUND(SUM(total_price)/COUNT(DISTINCT order_id),2) AS 'AOV'
+FROM sales;
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+#Total Pizzas Sold
+SELECT 
+	SUM(quantity) AS "Total Pizza's Sold"
+FROM sales;
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+#Total Orders
+SELECT 
+	COUNT(DISTINCT order_id) AS 'Total Orders'
+FROM sales;
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+#Average Pizzas Per Order
+SELECT 
+	ROUND(SUM(quantity)/COUNT(DISTINCT order_id),2) AS 'Avg Pizza per order'
+FROM sales;
+
+
+Select * from sales;
